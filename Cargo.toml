@@ -1,0 +1,22 @@
+[package]
+name = "async-rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.43.0", features = ["full"] }
+axum = { version = "0.8.1", features = ["http2", "macros"] }
+hyper-util = "0.1.10"
+diesel = { version = "2.2.7", features = ["postgres", "r2d2"] }
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.138"
+thiserror = "2.0.11"
+dotenvy = "0.15.7"
+config = "0.15.7"
+tower-http = { version = "0.6.2", features = ["trace"] }
+tower = { version = "0.5.2", features = ["limit", "buffer"] }
+signal-hook = "0.3.17"
+signal-hook-tokio = { version = "0.3.1", features = ["futures-v0_3"] }
+futures = "0.3.31"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
